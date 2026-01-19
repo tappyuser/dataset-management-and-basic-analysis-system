@@ -1,0 +1,5 @@
+gencsv.py
+lib*/
+bin/
+CACHEDIR.TAG
+*.swp

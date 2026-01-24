@@ -39,6 +39,12 @@ class Student:
                 maxval = score
         return maxval
 
+    def get_performance(self) -> str:
+        return "High Performance" if self.average() >= 50.0 else "Needs Improvement"
+
+    def __str__(self) -> str:
+        return f"{self.firstname} {self.lastname}\nAverage Score: {self.average()}\nMinimum Score: {self.minimum()}\nMaximum Score: {self.maximum()}\nComment: {self.get_performance()}"
+
 Students: TypeAlias = list[Student]
 students: Students = list()
 courses: list[str] = ['ele311', 'ele321', 'ele331', 'ele361', 'ele381']
@@ -63,14 +69,12 @@ except FileNotFoundError:
     print(f"The file {file_data} does not exist")
 except ValueError:
     print("Score should be of type int")
-    
+   
+# Print the students data
 for student in students:
-    print(student.scores)
-    print(student.average())
-    print(student.minimum())
-    print(student.maximum())
+    print(student)
 
 
-
-
-           
+# Loading and processing product data
+class Product: 
+    pass

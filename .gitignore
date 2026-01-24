@@ -1,5 +1,6 @@
 gencsv.py
-lib*/
+lib/
+lib64/
 bin/
 CACHEDIR.TAG
 *.swp
